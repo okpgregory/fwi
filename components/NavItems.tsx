@@ -19,7 +19,10 @@ export default function NavItems() {
           <li key={label}>
             <Link
               href={href}
-              className={buttonVariants({ variant: "ghost" })}
+              className={buttonVariants({
+                variant: "ghost",
+                className: "text-teal-50",
+              })}
               aria-current={pathname.includes(href) ? "page" : undefined}
             >
               {label}

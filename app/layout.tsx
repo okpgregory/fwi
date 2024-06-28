@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 import "@/styles/globals.css";
 import { cn } from "@/utils/cn";
 import Navbar from "@/layouts/Navbar";
 import { Providers } from "./providers";
 import { siteConfig } from "@/config/site";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Open_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: { default: siteConfig.name, template: `%s - ${siteConfig.name}` },

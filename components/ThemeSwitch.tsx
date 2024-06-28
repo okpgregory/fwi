@@ -11,14 +11,14 @@ export default function ThemeSwitch({ className }: { className?: string }) {
     <button
       onClick={() => toggleTheme()}
       className={cn(
-        "flex items-center justify-center rounded-full p-1 text-teal-900",
+        `flex items-center justify-center rounded-full p-1 text-teal-50`,
         className
       )}
     >
       {theme === "dark" ? (
-        <MoonIcon className="fill-teal-900" />
+        <MoonIcon className="fill-tealtext-teal-50" />
       ) : (
-        <SunIcon className="fill-teal-900" />
+        <SunIcon className="fill-tealtext-teal-50" />
       )}
     </button>
   );

@@ -1,7 +1,7 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Next.js + NextUI",
+  name: "FWI - Home",
   description: "On a mission to Heal Wounds",
   navItems: [
     {

@@ -1,7 +1,7 @@
 "use client";
 import { gallery } from "@/data/constants";
-import { cn } from "@/utils/cn";
-import { fadeIn, staggerContainer } from "@/utils/motion";
+import { cn } from "@/lib/utils";
+import { fadeIn, staggerContainer } from "@/lib/motion";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Dispatch, SetStateAction, useState } from "react";

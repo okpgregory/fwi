@@ -1,11 +1,10 @@
-import type { Metadata } from "next";
-import { Fjalla_One } from "next/font/google";
-import "@/styles/globals.css";
-import { cn } from "@/utils/cn";
-import Navbar from "@/layouts/Navbar";
-import { Providers } from "./providers";
 import { siteConfig } from "@/config/site";
 import Footer from "@/layouts/Footer";
+import Navbar from "@/layouts/Navbar";
+import "@/styles/globals.css";
+import { cn } from "@/utils/cn";
+import type { Metadata } from "next";
+import { Fjalla_One } from "next/font/google";
 
 const inter = Fjalla_One({ subsets: ["latin"], weight: "400" });
 

@@ -7,7 +7,7 @@ import MaxWidthWrapper from "@/components/shared/MaxWidthWrapper";
 import { Logo } from "@/components/svgs";
 import { useNavbarVisibility } from "@/hooks/useNavbarVisibility";
 import { cn } from "@/lib/utils";
-import { navVariants } from "@/utils/motion";
+import { navVariants } from "@/lib/motion";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";

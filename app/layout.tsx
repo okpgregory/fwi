@@ -2,7 +2,7 @@ import { siteConfig } from "@/config/site";
 import Footer from "@/layouts/Footer";
 import Navbar from "@/layouts/Navbar";
 import "@/styles/globals.css";
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Fjalla_One } from "next/font/google";
 

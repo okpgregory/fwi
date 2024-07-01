@@ -9,7 +9,7 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "mongodb"
   url      = env("DATABASE_URL")
 }
 
@@ -26,7 +26,7 @@ datasource db {
 // }
 
 model PatientReferral{
-  id String @id @default(cuid())
+  id String @id @default(cuid()) @map("_id")
   patientFirstName String
   patientLastName String
   patientEmail String @unique
@@ -59,7 +59,7 @@ model PatientReferral{
 }
 
 model Testimonial{
-  id String @id @default(cuid())
+  id String @id @default(cuid()) @map("_id")
   personFullName String
   personImageUrl String
   personRelationship String
@@ -67,7 +67,7 @@ model Testimonial{
 }
 
 model SocialLinks{
-  id String @id @default(cuid())
+  id String @id @default(cuid()) @map("_id")
   name String
   handle String
 }

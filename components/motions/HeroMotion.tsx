@@ -8,9 +8,6 @@ import { buttonVariants } from "../ui/button";
 export default function HeroMotion() {
   return (
     <motion.div
-      variants={staggerContainer}
-      initial="hidden"
-      whileInView="show"
       viewport={{ once: true }}
       className="flex flex-col items-center -mb-20 mx-auto py-8 rounded-lg max-w-3xl text-center"
     >

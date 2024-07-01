@@ -59,9 +59,6 @@ export default function ImageSlide() {
 
   return (
     <motion.div
-      variants={staggerContainer}
-      initial="hidden"
-      whileInView="show"
       viewport={{ once: true }}
       className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-5"
     >

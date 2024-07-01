@@ -14,9 +14,9 @@ export async function createPatientReferrals(
   patientReferralForm: PatientReferralForm
 ) {
   try {
-    const patientReferral = await prisma.patientReferral.create({
-      data: { patientReferralForm },
-    });
+    const patientReferral = await prisma.patientReferral.create(
+      patientReferralForm
+    );
     return { patientReferral };
   } catch (error) {
     return { error };

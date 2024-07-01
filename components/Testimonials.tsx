@@ -50,7 +50,7 @@ export default function Testimonials() {
                   <div className="mb-4">
                     <FaQuoteLeft className="mx-auto text-4xl text-primary/20 md:mx-0 xl:text-6xl" />
                   </div>
-                  <p className="text-center font-medium md:text-left xl:text-lg text-black/90">
+                  <p className="leading-8 text-center font-medium md:text-left xl:text-lg text-black/90">
                     {person.message}
                   </p>
                 </div>

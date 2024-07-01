@@ -3,11 +3,12 @@
 import MenuButton from "@/components/MenuButton";
 import MobileMenu from "@/components/MobileMenu";
 import NavItems from "@/components/NavItems";
-import ThemeSwitch from "@/components/ThemeSwitch";
 import MaxWidthWrapper from "@/components/shared/MaxWidthWrapper";
 import { Logo } from "@/components/svgs";
 import { useNavbarVisibility } from "@/hooks/useNavbarVisibility";
 import { cn } from "@/lib/utils";
+import { navVariants } from "@/utils/motion";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -16,9 +17,12 @@ export default function Navbar() {
   const { isNavbarVisible } = useNavbarVisibility(1);
 
   return (
-    <header
+    <motion.header
+      variants={navVariants}
+      initial="hidden"
+      whileInView="show"
       className={cn(
-        "top-0 z-50 fixed inset-x-0 h-24 transition-all duration-500 ease-in-out rounded-bl-sm rounded-br-sm",
+        "top-0 z-50 fixed inset-x-0 h-24 rounded-bl-sm rounded-br-sm",
         {
           "shadow-md bg-gradient-to-b from-blue-950 via-blue-950/60 to-blue-950/30 backdrop-blur-md":
             isNavbarVisible,
@@ -65,6 +69,6 @@ export default function Navbar() {
           </div>
         </MaxWidthWrapper>
       </div>
-    </header>
+    </motion.header>
   );
 }

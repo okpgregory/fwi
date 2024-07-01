@@ -20,7 +20,7 @@ export default function OurGoals() {
             {goals.map((goal, i) => (
               <div key={i} className="flex items-center gap-4">
                 <CheckCheck className="bg-blue-900/60 text-blue-100 rounded-full text-lg p-1 min-h-8 min-w-8" />
-                <li className="text-lg font-medium">{goal.text}</li>
+                <li className="text-lg font-medium leading-8">{goal.text}</li>
               </div>
             ))}
           </ul>

@@ -32,7 +32,7 @@ export default function OurServices() {
               <h2 className="font-medium text-lg h-14 flex items-center text-center">
                 {service.name}
               </h2>
-              <p className="text-center text-black/80 text-md font-medium">
+              <p className="text-center text-black/80 leading-8 text-md font-medium">
                 {service.text}
               </p>
             </div>

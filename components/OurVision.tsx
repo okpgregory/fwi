@@ -11,7 +11,7 @@ export default function OurVision() {
         <div className="grid lg:grid-cols-1">
           <div className="flex flex-col items-center">
             <SectionTitle text="Our vision" />
-            <p className="mx-auto mt-6 max-w-prose text-center font-medium text-teal-900/8 italic relative text-lg z-10">
+            <p className="mx-auto mt-6 max-w-prose text-center leading-8 font-medium text-teal-900/8 italic relative text-lg z-10">
               A focused vision to grow an organization of health care
               professionals who provide wound care and healing of wounds to all
               who need proper wound care management. Training skilled health

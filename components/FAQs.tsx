@@ -13,10 +13,10 @@ export default function FAQs() {
   return (
     <MaxWidthWrapper className="py-20">
       <SectionTitle text="Faqs" />
-      <h6>
+      <p className="font-bold tracking-[8px] w-full text-center leading-8 text-sm text-blue-600 mb-16">
         Find answers to commonly asked questions about our foot and wound care
         institute.
-      </h6>
+      </p>
       <Accordion type="single" collapsible className="w-full">
         {FAQS.map((question, i) => (
           <AccordionItem key={i} value={`item-${i + 1}`}>

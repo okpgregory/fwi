@@ -1,0 +1,73 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// type Name {
+//   firstName String
+//   lastName String
+// }
+
+// type Address {
+//   streetAddress String
+//   city String
+//   stateOrProvince String
+//   postalOrZipCode String
+// }
+
+model PatientReferral{
+  id String @id @default(cuid())
+  patientFirstName String
+  patientLastName String
+  patientEmail String @unique
+  patientPhone String
+  patientStreetAddress String
+  patientCity String
+  patientStateOrProvince String
+  patientPostalOrZipCode String
+  patientBirthday DateTime
+  patientPrimaryCareProvider String
+  patientPowerOfAttorney String
+  patientPowerOfAttorneyEmail String
+  patientInsuranceProvider String
+  patientInsuranceIdNumber String
+  patientMedicareIdNumber String
+  patientDiagnosis String
+  patientDurationOfWound String
+  patientMedicalProviderCompanyName String
+  patientMedicalProviderFirstName String
+  patientMedicalProviderLastName String
+  patientMedicalProviderEmail String
+  patientMedicalProviderPhone String
+  patientMedicalProviderStreetAddress String
+  patientMedicalProviderCity String
+  patientMedicalProviderStateOrProvince String
+  patientMedicalProviderPostalOrZipCode String
+  patientMedicalProviderType String
+  createDate DateTime @default(now())
+  updateDate DateTime @updatedAt
+}
+
+model Testimonial{
+  id String @id @default(cuid())
+  personFullName String
+  personImageUrl String
+  personRelationship String
+  personMessage String
+}
+
+model SocialLinks{
+  id String @id @default(cuid())
+  name String
+  handle String
+}

@@ -1,6 +1,6 @@
 "use client";
 
-import { fadeIn, staggerContainer, textVariant } from "@/utils/motion";
+import { fadeIn, staggerContainer, textVariant } from "@/lib/motion";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { buttonVariants } from "../ui/button";

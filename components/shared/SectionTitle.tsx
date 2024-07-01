@@ -1,4 +1,4 @@
-import React from "react";
+import { cn } from "@/lib/utils";
 
 type colorRange =
   | "50"
@@ -15,26 +15,34 @@ type colorRange =
 
 type Props = {
   text: string;
-  priColor?: colorRange;
-  secColor?: colorRange;
+  decStyle?: string;
+  priStyle?: string;
+  secStyle?: string;
 };
 
 export default function SectionTitle({
   text,
-  priColor = "300",
-  secColor = "900",
+  decStyle = "bg-blue-300",
+  priStyle = "text-blue-300",
+  secStyle = "text-blue-900",
 }: Props) {
   return (
-    <div className="flex flex-col items-center txb">
-      <span className={`h-16 w-[2px] bg-blue-${priColor}`} aria-hidden="true" />
+    <div className="flex flex-col items-center my-5">
+      <span className={cn("h-16 w-[2px]", decStyle)} aria-hidden="true" />
       <div className="relative w-fit py-8">
         <h2
-          className={`text-4xl sm:text-6xl md:text-7xl tracking-wider text-blue-${priColor} font-light w-fit`}
+          className={cn(
+            "text-4xl sm:text-6xl md:text-7xl text-center text-pretty tracking-wider font-light w-fit",
+            priStyle
+          )}
         >
           {text}{" "}
         </h2>
         <span
-          className={`absolute left-1/2 -translate-x-1/2 top-1/2 translate-y-0.5 text-blue-${secColor} font-bold tracking-[8px] w-full text-center text-sm`}
+          className={cn(
+            "absolute left-1/2 -translate-x-1/2 top-1/2 translate-y-0.5 font-bold tracking-[8px] w-full text-center text-sm",
+            secStyle
+          )}
         >
           {text.toUpperCase()}
         </span>

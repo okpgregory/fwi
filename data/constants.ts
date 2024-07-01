@@ -1,42 +1,142 @@
-import { Book, Caravan, Eye, Glasses, Globe, Map } from "lucide-react";
+import { Book, Caravan, Glasses, Globe, Map } from "lucide-react";
+import { CiMedicalMask } from "react-icons/ci";
+import {
+  FaAmbulance,
+  FaBurn,
+  FaDna,
+  FaFacebook,
+  FaInstagram,
+} from "react-icons/fa";
+import { FaHeartPulse } from "react-icons/fa6";
+import { GiFirstAidKit } from "react-icons/gi";
+import { IoBandage, IoBody } from "react-icons/io5";
+
+export const healthInsurances = [
+  { name: "Medicare", image: "/assets/health-insurances/Medicare.png" },
+  {
+    name: "Blue Cross Blue Shield",
+    image: "/assets/health-insurances/Bluecross-Blueshield.png",
+  },
+  { name: "Aetna", image: "/assets/health-insurances/Aetna.png" },
+  { name: "Meridian", image: "/assets/health-insurances/Meridian.png" },
+  {
+    name: "Railroad Medicare",
+    image: "/assets/health-insurances/Railroad.png",
+  },
+  { name: "Ambetter", image: "/assets/health-insurances/Ambetter.png" },
+];
 
 export const goals = [
   {
     topic: "National Coverage",
-    text: "Nationwide provision of wound care to all individuals in need of wound care services",
+    text: "Nationwide provision of wound care to all individuals in need of wound care services.",
     icon: Map,
   },
   {
     topic: "Educational Awareness",
-    text: "Wound healing and prevention care education",
+    text: "Wound healing and prevention care education.",
     icon: Book,
   },
   {
     topic: "Mobile Aid",
-    text: "Skilled mobile wound care service that is caring and brings comfort to patients",
+    text: "Skilled mobile wound care service that is caring and brings comfort to patients.",
     icon: Caravan,
   },
   {
     topic: "Expert Personnel",
-    text: "Elite skilled health care professionals who train and treat wounds",
+    text: "Elite skilled health care professionals who train and treat wounds.",
     icon: Glasses,
   },
   {
     topic: "Global Training",
-    text: "Global wound care training and professional development Focused on wound care",
+    text: "Global wound care training and professional development Focused on wound care.",
     icon: Globe,
   },
 ];
 
 export const services = [
-  "Severe and Chronic Wound Care",
-  "Diabetic Ulcer",
-  "Arterial Ulcer",
-  "Venous Ulcers",
-  "Pressure Ulcers",
-  "Surgical Wound",
-  "Burns",
-  "Traumatic Wound",
+  {
+    icon: FaAmbulance,
+    name: "Severe and Chronic Wound Care",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    backgroundUrl: "/assets/services/cardSvgs/card-1.svg",
+    imageUrl: "/assets/services/chronic.jpg",
+  },
+  {
+    icon: IoBody,
+    name: "Diabetic Ulcer",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    backgroundUrl: "/assets/services/cardSvgs/card-1.svg",
+    imageUrl: "/assets/services/diabetic.jpg",
+    light: true,
+  },
+  {
+    icon: FaDna,
+    name: "Arterial Ulcer",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    backgroundUrl: "/assets/services/cardSvgs/card-6.svg",
+    imageUrl: "/assets/services/arterial.jpg",
+  },
+  {
+    icon: FaHeartPulse,
+    name: "Venous Ulcers",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    backgroundUrl: "/assets/services/cardSvgs/card-6.svg",
+    imageUrl: "/assets/services/venous.jpg",
+  },
+  {
+    icon: GiFirstAidKit,
+    name: "Pressure Ulcers",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    backgroundUrl: "/assets/services/cardSvgs/card-1.svg",
+    imageUrl: "/assets/services/pressure.jpg",
+  },
+  {
+    icon: CiMedicalMask,
+    name: "Surgical Wound",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    backgroundUrl: "/assets/services/cardSvgs/card-1.svg",
+    imageUrl: "/assets/services/surgical.jpg",
+  },
+  {
+    icon: FaBurn,
+    name: "Burns",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    backgroundUrl: "/assets/services/cardSvgs/card-1.svg",
+    imageUrl: "/assets/services/burns.jpg",
+    light: true,
+  },
+  {
+    icon: IoBandage,
+    name: "Traumatic Wound",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    backgroundUrl: "/assets/services/cardSvgs/card-6.svg",
+    imageUrl: "/assets/services/traumatic.jpg",
+  },
+];
+
+export const testimonials = [
+  {
+    image: "/assets/testimonials/t-avt-1.jpg",
+    name: "Anne Smith",
+    position: "Patient",
+    message:
+      "A well rounded software developer, Mr. Greg was able to handle so many areas in the development of my app.",
+  },
+  {
+    image: "/assets/testimonials/t-avt-2.jpg",
+    name: "Jane Doe",
+    position: "Patient",
+    message:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!",
+  },
+  {
+    image: "/assets/testimonials/t-avt-3.jpg",
+    name: "Jhon Doe",
+    position: "Patient",
+    message:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!",
+  },
 ];
 
 export const FAQS = [
@@ -100,5 +200,18 @@ export const gallery = [
   {
     image: "/assets/gallery/surgical-wound-care.png",
     title: "Surgical Wound Care",
+  },
+];
+
+export const socials = [
+  {
+    name: "facebook",
+    link: "https://facebook.com/",
+    icon: FaFacebook,
+  },
+  {
+    name: "instagram",
+    link: "https://instagram.com/",
+    icon: FaInstagram,
   },
 ];

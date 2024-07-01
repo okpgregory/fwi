@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import { Open_Sans } from "next/font/google";
+import { Fjalla_One } from "next/font/google";
 import "@/styles/globals.css";
 import { cn } from "@/utils/cn";
 import Navbar from "@/layouts/Navbar";
 import { Providers } from "./providers";
 import { siteConfig } from "@/config/site";
+import Footer from "@/layouts/Footer";
 
-const inter = Open_Sans({ subsets: ["latin"] });
+const inter = Fjalla_One({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
   title: { default: siteConfig.name, template: `%s - ${siteConfig.name}` },
@@ -30,6 +31,7 @@ export default function RootLayout({
         <main className="relative flex flex-col">
           <div className="flex-grow flex-1">{children}</div>
         </main>
+        <Footer />
       </body>
     </html>
   );

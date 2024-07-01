@@ -18,9 +18,9 @@ export default function Navbar() {
   return (
     <header
       className={cn(
-        "top-0 z-50 fixed inset-x-0 h-16 md:h-24 transition-all duration-300 rounded-bl-sm rounded-br-sm",
+        "top-0 z-50 fixed inset-x-0 h-24 transition-all duration-500 ease-in-out rounded-bl-sm rounded-br-sm",
         {
-          "shadow-md bg-gradient-to-b from-black/30 to-black/10 backdrop-blur-md":
+          "shadow-md bg-gradient-to-b from-blue-950 via-blue-950/60 to-blue-950/30 backdrop-blur-md":
             isNavbarVisible,
         }
       )}
@@ -28,20 +28,20 @@ export default function Navbar() {
     >
       <div
         className={cn(
-          "relative rounded- transition-all duration-300 rounded-bl-sm rounded-br-sm",
+          "relative rounded- transition-all duration-500 ease-in-out rounded-bl-sm rounded-br-sm",
           {
-            "bg-gradient-to-b from-black/30 to-black/10 backdrop-blur-md":
+            "bg-gradient-to-b from-blue-950 via-blue-950/60 to-blue-950/30 backdrop-blur-md":
               isNavbarVisible,
           }
         )}
       >
         <MaxWidthWrapper>
-          <div className="flex items-center h-16 md:h-24">
+          <div className="flex items-center h-24">
             <div className="flex w-full items-center justify-between lg:w-fit">
               {/* LOGO */}
               <div className="flex z-30" onClick={() => setIsMenuOpen(false)}>
                 <Link href="/">
-                  <Logo className="text-blue-100 h-12 md:h-16 w-auto overflow-visible" />
+                  <Logo className="text-blue-100 h-14 md:h-16 w-auto overflow-visible" />
                 </Link>
               </div>
 

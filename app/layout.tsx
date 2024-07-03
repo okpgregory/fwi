@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full">
+    <html lang="en" className="h-full scroll-smooth">
       <body className={cn("relative font-sans antialiased", inter.className)}>
         <Navbar />
         <main className="relative flex flex-col">

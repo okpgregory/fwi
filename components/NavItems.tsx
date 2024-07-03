@@ -21,7 +21,7 @@ export default function NavItems() {
               href={href}
               className={buttonVariants({
                 variant: "ghost",
-                className: "text-teal-50",
+                className: "text-blue-50",
               })}
               aria-current={pathname.includes(href) ? "page" : undefined}
             >

@@ -9,11 +9,11 @@ export default function HeroMotion() {
   return (
     <motion.div
       viewport={{ once: true }}
-      className="flex flex-col items-center -mb-20 mx-auto py-8 rounded-lg max-w-3xl text-center"
+      className="flex flex-col items-center mx-auto py-8 -mt-20 rounded-lg max-w-3xl text-center"
     >
       <motion.h1
         variants={textVariant(0.6)}
-        className="font-bold text-4xl text-blue-400 sm:text-6xl md:text-7xl tracking-tight"
+        className="font-bold text-4xl text-blue-500 sm:text-6xl md:text-7xl tracking-tight"
       >
         On a mission to Heal Wounds.
       </motion.h1>

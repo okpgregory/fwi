@@ -28,20 +28,17 @@ export default function Navbar() {
       variants={navVariants}
       initial="hidden"
       whileInView="show"
-      className={cn(
-        "top-0 z-50 sticky inset-x-0 h-24 rounded-bl-sm rounded-br-sm bg-gradient-to-b",
-        {
-          "shadow-md from-blue-950 via-blue-950/60 to-blue-950/30 backdrop-blur-md":
-            isNavbarVisible,
-          "from-blue-950 via-blue-950 to-blue-950/90 backdrop-blur-md":
-            !isNavbarVisible,
-        }
-      )}
+      className={cn("top-0 z-50 sticky inset-x-0 h-24 bg-gradient-to-b", {
+        "shadow-md from-blue-950 via-blue-950/60 to-blue-950/30 backdrop-blur-md":
+          isNavbarVisible,
+        "from-blue-950 via-blue-950 to-blue-950/90 backdrop-blur-md":
+          !isNavbarVisible,
+      })}
       aria-label="Header"
     >
       <div
         className={cn(
-          "relative rounded- transition-all duration-500 ease-in-out rounded-bl-sm rounded-br-sm bg-gradient-to-b",
+          "relative rounded- transition-all duration-500 ease-in-out bg-gradient-to-b",
           {
             "from-blue-950 via-blue-950/60 to-blue-950/30 backdrop-blur-md":
               isNavbarVisible,

@@ -48,9 +48,9 @@ const PatientReferralSchema = new Schema({
   },
   powerOfAttorneyEmail: {
     type: String,
-    required: function () {
-      return this.powerOfAttorney === "Yes"; // Required only if powerOfAttorney is 'Yes'
-    },
+    // required: function () {
+    //   return this.powerOfAttorney === "Yes"; // Required only if powerOfAttorney is 'Yes'
+    // },
     lowerCase: true,
   },
   patientInsuranceProvider: {
@@ -110,9 +110,9 @@ const PatientReferralSchema = new Schema({
   },
 });
 
-PatientReferralSchema.pre("save", function (next) {
-  this.updatedAt = Date.now();
-});
+// PatientReferralSchema.pre("save", function (next) {
+//   this.updatedAt = Date.now();
+// });
 
 const PatientReferral =
   models.PatientReferral || model("PatientReferral", PatientReferralSchema);

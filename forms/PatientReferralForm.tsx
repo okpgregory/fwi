@@ -515,7 +515,7 @@ export default function PatientReferralForm() {
               </FormLabel>
               <FormControl>
                 <Dropdown
-                  values={["Facility", "No"]}
+                  values={["Facility", "Provider"]}
                   onChangeHandler={() => {}}
                   className="w-full"
                 />

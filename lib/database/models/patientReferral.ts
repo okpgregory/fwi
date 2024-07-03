@@ -1,6 +1,43 @@
 import { model, models } from "mongoose";
 import { Schema } from "mongoose";
 
+interface Name {
+  firstName: string;
+  lastName: string;
+}
+
+interface Address {
+  streetAddress: string;
+  city: string;
+  stateOrProvince: string;
+  postalOrZipCode: string;
+}
+
+export interface IPatientRefrral extends Document {
+  _id: string;
+  patientName: Name;
+  patientEmail: string;
+  patientPhone: string;
+  patientAddress: Address;
+  patientBirthday: Date;
+  patientPrimaryCareProvider: string;
+  powerOfAttorney: "Yes" | "No";
+  powerOfAttorneyEmail?: string; // Optional because it's not always required
+  patientInsuranceProvider: string;
+  patientInsuranceIdNumber: string;
+  medicareIdNumber: string;
+  diagnosis: string;
+  durationOfWound: string;
+  medicalProviderCompanyName: string;
+  medicalProviderName: Name;
+  medicalProviderEmail: string;
+  medicalProviderPhone: string;
+  medicalProviderAddress: Address;
+  medicalProviderType: "Facility" | "Provider";
+  createdAt: Date;
+  updatedAt: Date;
+}
+
 // Define nested schemas
 const NameSchema = new Schema({
   firstName: { type: String, required: true },
@@ -48,9 +85,6 @@ const PatientReferralSchema = new Schema({
   },
   powerOfAttorneyEmail: {
     type: String,
-    // required: function () {
-    //   return this.powerOfAttorney === "Yes"; // Required only if powerOfAttorney is 'Yes'
-    // },
     lowerCase: true,
   },
   patientInsuranceProvider: {
@@ -114,5 +148,5 @@ const PatientReferralSchema = new Schema({
 //   this.updatedAt = Date.now();
 // });
 
-const PatientReferral =
+export const PatientReferral =
   models.PatientReferral || model("PatientReferral", PatientReferralSchema);

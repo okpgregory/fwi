@@ -1,7 +1,7 @@
 "use client";
-import { gallery } from "@/data/constants";
-import { cn } from "@/lib/utils";
-import { fadeIn, staggerContainer } from "@/lib/motion";
+import { siteConfig } from "@/config/site";
+import { cn } from "@/utils";
+import { fadeIn, staggerContainer } from "@/utils/motion";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Dispatch, SetStateAction, useState } from "react";
@@ -62,7 +62,7 @@ export default function ImageSlide() {
       viewport={{ once: true }}
       className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-5"
     >
-      {gallery.map((image, index) => (
+      {siteConfig.gallery.map((image, index) => (
         <ImageCard
           key={image.title}
           {...image}

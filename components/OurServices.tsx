@@ -1,7 +1,7 @@
-import { services } from "@/data/constants";
 import Image from "next/image";
 import MaxWidthWrapper from "./shared/MaxWidthWrapper";
 import SectionTitle from "./shared/SectionTitle";
+import { siteConfig } from "@/config/site";
 
 // const GradientLight = () => {
 //   return (
@@ -20,7 +20,7 @@ export default function OurServices() {
         secStyle="text-blue-900"
       />
       <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 first-line:mt-[30px]">
-        {services.map((service) => (
+        {siteConfig.services.map((service) => (
           <div
             key={service.name}
             className="relative aspect-square py-10 px-1 overflow-hidden rounded-md bg-gray-200/70 shadow-md"

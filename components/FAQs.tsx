@@ -5,9 +5,9 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "./ui/accordion";
-import { FAQS } from "@/data/constants";
 import MaxWidthWrapper from "./shared/MaxWidthWrapper";
 import SectionTitle from "./shared/SectionTitle";
+import { siteConfig } from "@/config/site";
 
 export default function FAQs() {
   return (
@@ -18,7 +18,7 @@ export default function FAQs() {
         institute.
       </p>
       <Accordion type="single" collapsible className="w-full">
-        {FAQS.map((question, i) => (
+        {siteConfig.FAQS.map((question, i) => (
           <AccordionItem key={i} value={`item-${i + 1}`}>
             <AccordionTrigger className="text-lg text-left text-blue-950">
               {question.question}

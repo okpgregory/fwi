@@ -1,6 +1,6 @@
 import MaxWidthWrapper from "@/components/shared/MaxWidthWrapper";
 import { LogoOnly } from "@/components/svgs";
-import { socials } from "@/data/constants";
+import { siteConfig } from "@/config/site";
 import Link from "next/link";
 import React from "react";
 
@@ -29,7 +29,7 @@ export default function Footer() {
               <span>708-271-3537</span>
             </div>
             <ul className="flex gap-5 flex-wrap">
-              {socials.map((item) => (
+              {siteConfig.socials.map((item) => (
                 <Link
                   key={item.name}
                   href={item.link}

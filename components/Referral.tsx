@@ -1,7 +1,7 @@
 import Image from "next/image";
 import ReferralForm from "./ReferralForm";
 import MaxWidthWrapper from "./shared/MaxWidthWrapper";
-import { Button } from "./ui/button";
+import { Button, buttonVariants } from "./ui/button";
 import {
   Dialog,
   DialogContent,
@@ -9,6 +9,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "./ui/dialog";
+import Link from "next/link";
 
 export default function Referral() {
   return (
@@ -43,7 +44,11 @@ export default function Referral() {
             </DialogTrigger>
             <DialogContent className="h-[80vh] overflow-y-scroll py-8 px-4">
               <DialogHeader>
-                <DialogTitle>Referral Form</DialogTitle>
+                <DialogTitle>
+                  <Link className={buttonVariants()} href="/referral">
+                    Refer Patient Now
+                  </Link>
+                </DialogTitle>
               </DialogHeader>
               <ReferralForm />
             </DialogContent>

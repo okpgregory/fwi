@@ -7,10 +7,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import MaxWidthWrapper from "@/components/shared/MaxWidthWrapper";
 import SectionTitle from "@/components/shared/SectionTitle";
-import { testimonials } from "@/data/constants";
 import Image from "next/image";
 import { FaQuoteLeft } from "react-icons/fa";
 import { Navigation, Pagination } from "swiper/modules";
+import { siteConfig } from "@/config/site";
 
 export default function Testimonials() {
   return (
@@ -25,7 +25,7 @@ export default function Testimonials() {
           modules={[Navigation, Pagination]}
           className="h-[400px]"
         >
-          {testimonials.map((person, index) => (
+          {siteConfig.testimonials.map((person, index) => (
             <SwiperSlide key={index}>
               <div className="flex h-full flex-col items-center gap-x-8 px-16 md:flex-row">
                 <div className="relative mx-auto mb-4 flex w-full max-w-[300px] flex-col items-center md:mb-0 xl:mx-0 xl:justify-center">

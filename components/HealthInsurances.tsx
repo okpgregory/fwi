@@ -1,8 +1,8 @@
 import React from "react";
 import MaxWidthWrapper from "./shared/MaxWidthWrapper";
-import { healthInsurances } from "@/data/constants";
 import Image from "next/image";
 import SectionTitle from "./shared/SectionTitle";
+import { siteConfig } from "@/config/site";
 
 export default function HealthInsurances() {
   return (
@@ -12,7 +12,7 @@ export default function HealthInsurances() {
         {/* <SectionTitle text="We accept" /> */}
         <div>
           <ul className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {healthInsurances.map((insurance) => (
+            {siteConfig.healthInsurances.map((insurance) => (
               <li
                 key={insurance.name}
                 className="relative bg-blue-300/10 h-14 rounded-lg py-10 px-4"

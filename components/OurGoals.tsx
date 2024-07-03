@@ -1,8 +1,8 @@
-import { goals } from "@/data/constants";
 import { CheckCheck } from "lucide-react";
 import Image from "next/image";
 import MaxWidthWrapper from "./shared/MaxWidthWrapper";
 import SectionTitle from "./shared/SectionTitle";
+import { siteConfig } from "@/config/site";
 
 export default function OurGoals() {
   return (
@@ -17,7 +17,7 @@ export default function OurGoals() {
       <div className="flex flex-col-reverse items-center gap-10 md:items-stretch md:flex-row justify-between">
         <div className="min-h-full w-full md:w-1/2">
           <ul className="h-full flex flex-col justify-evenly gap-5">
-            {goals.map((goal, i) => (
+            {siteConfig.goals.map((goal, i) => (
               <div key={i} className="flex items-center gap-4">
                 <CheckCheck className="bg-blue-900/60 text-blue-100 rounded-full text-lg p-1 min-h-8 min-w-8" />
                 <li className="text-lg font-medium leading-8">{goal.text}</li>

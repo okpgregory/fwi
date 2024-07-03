@@ -9,7 +9,7 @@ import Referral from "@/components/Referral";
 import Testimonials from "@/components/Testimonials";
 import { FC } from "react";
 
-const Home: FC = () => {
+const HomePage: FC = () => {
   return (
     <>
       <Hero />
@@ -25,4 +25,4 @@ const Home: FC = () => {
   );
 };
 
-export default Home;
+export default HomePage;

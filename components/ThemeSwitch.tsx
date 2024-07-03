@@ -2,7 +2,7 @@
 
 import useThemeSwitcher from "@/hooks/useThemeSwitcher";
 import { MoonIcon, SunIcon } from "./ui/Icons";
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils";
 
 export default function ThemeSwitch({ className }: { className?: string }) {
   const { theme, toggleTheme } = useThemeSwitcher();

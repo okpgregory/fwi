@@ -42,26 +42,24 @@ export const PatientReferralSchema = z.object({
     .max(400, "Characters too long"),
   patientPhone: z
     .string()
-    .min(10, "Must be 10 characters long")
-    .max(10, "Must be 10 characters long"), // Adjust min length as needed
+    .min(10, "Must be a valid phone number")
+    .max(10, "Must be a valid phone number"), // Adjust min length as needed
   patientAddress: AddressSchema,
   patientBirthday: z.date(),
-  patientPrimaryCareProvider: z.string().min(1),
+  patientPrimaryCareProvider: z.string().min(1, "This field is required"),
   powerOfAttorney: z.enum(["Yes", "No"]),
   powerOfAttorneyEmail: z.string().email().optional(), // Make optional if not always required
-  patientInsuranceProvider: z.string().min(1),
-  patientInsuranceIdNumber: z.string().min(1),
-  medicareIdNumber: z.string().min(1),
-  diagnosis: z.string().min(1),
-  durationOfWound: z.string().min(1),
-  medicalProviderCompanyName: z.string().min(1),
+  patientInsuranceProvider: z.string().min(1, "This field is required"),
+  patientInsuranceIdNumber: z.string().min(1, "This field is required"),
+  medicareIdNumber: z.string().min(1, "This field is required"),
+  diagnosis: z.string().min(1, "This field is required"),
+  durationOfWound: z.string().min(1, "This field is required"),
+  medicalProviderCompanyName: z.string().min(1, "This field is required"),
   medicalProviderName: NameSchema,
   medicalProviderEmail: z.string().email(),
-  medicalProviderPhone: z.string().min(10), // Adjust min length as needed
+  medicalProviderPhone: z.string().min(10, "Must be a valid phone number"), // Adjust min length as needed
   medicalProviderAddress: AddressSchema,
   medicalProviderType: z.enum(["Facility", "Provider"]),
-  createdAt: z.date().optional(), // Assuming it's optional based on your Mongoose schema
-  updatedAt: z.date().optional(), // Assuming it's optional based on your Mongoose schema
 });
 
 // type referralFormType = {

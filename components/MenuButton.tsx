@@ -17,7 +17,7 @@ export default function MenuButton({ isOpen, setIsOpen, className }: Props) {
     >
       <motion.span
         className={cn(
-          "absolute left-[50%] top-[25%] block h-[3px] w-full -translate-x-[50%] -translate-y-[50%] rounded-sm bg-white transition-transform duration-300",
+          "absolute left-[50%] top-[25%] block h-[3px] w-full -translate-x-[50%] -translate-y-[50%] rounded-sm bg-blue-600 transition-transform duration-300",
           {
             "top-[50%] -translate-x-[50%] -translate-y-[50%] rotate-45": isOpen,
           }
@@ -28,7 +28,7 @@ export default function MenuButton({ isOpen, setIsOpen, className }: Props) {
       />
       <motion.span
         className={cn(
-          "absolute left-[50%] top-[75%] block h-[3px] w-full -translate-x-[50%] -translate-y-[50%] rounded-sm bg-white transition-transform duration-300",
+          "absolute left-[50%] top-[75%] block h-[3px] w-full -translate-x-[50%] -translate-y-[50%] rounded-sm bg-blue-600 transition-transform duration-300",
           {
             "top-[50%] -translate-x-[50%] -translate-y-[50%] -rotate-45":
               isOpen,

@@ -28,27 +28,22 @@ export const healthInsurances = [
 
 export const goals = [
   {
-    topic: "National Coverage",
     text: "Nationwide provision of wound care to all individuals in need of wound care services.",
     icon: Map,
   },
   {
-    topic: "Educational Awareness",
     text: "Wound healing and prevention care education.",
     icon: Book,
   },
   {
-    topic: "Mobile Aid",
     text: "Skilled mobile wound care service that is caring and brings comfort to patients.",
     icon: Caravan,
   },
   {
-    topic: "Expert Personnel",
     text: "Elite skilled health care professionals who train and treat wounds.",
     icon: Glasses,
   },
   {
-    topic: "Global Training",
     text: "Global wound care training and professional development Focused on wound care.",
     icon: Globe,
   },
@@ -58,59 +53,51 @@ export const services = [
   {
     icon: FaAmbulance,
     name: "Severe and Chronic Wound Care",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    backgroundUrl: "/assets/services/cardSvgs/card-1.svg",
+    text: "Delivering compassionate expertise for severe and chronic wound care, ensuring healing and comfort for every patient.",
     imageUrl: "/assets/services/chronic.jpg",
   },
   {
     icon: IoBody,
     name: "Diabetic Ulcer",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    backgroundUrl: "/assets/services/cardSvgs/card-1.svg",
+    text: "Specializing in comprehensive diabetic ulcer care, ensuring effective treatment and improved quality of life.",
     imageUrl: "/assets/services/diabetic.jpg",
     light: true,
   },
   {
     icon: FaDna,
     name: "Arterial Ulcer",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    backgroundUrl: "/assets/services/cardSvgs/card-6.svg",
+    text: "Delivering comprehensive care for arterial ulcers, prioritizing vascular health and specialized treatment to promote effective healing.",
     imageUrl: "/assets/services/arterial.jpg",
   },
   {
     icon: FaHeartPulse,
     name: "Venous Ulcers",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    backgroundUrl: "/assets/services/cardSvgs/card-6.svg",
+    text: "Offering specialized care for venous ulcers, promoting healing and vascular health with tailored treatment plans.",
     imageUrl: "/assets/services/venous.jpg",
   },
   {
     icon: GiFirstAidKit,
     name: "Pressure Ulcers",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    backgroundUrl: "/assets/services/cardSvgs/card-1.svg",
+    text: "Providing dedicated care for pressure ulcers, emphasizing prevention, treatment, and comfort for optimal healing.",
     imageUrl: "/assets/services/pressure.jpg",
   },
   {
     icon: CiMedicalMask,
     name: "Surgical Wound",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    backgroundUrl: "/assets/services/cardSvgs/card-1.svg",
+    text: "Expertly managing surgical wounds with personalized care plans to promote rapid healing and minimize complications.",
     imageUrl: "/assets/services/surgical.jpg",
   },
   {
     icon: FaBurn,
     name: "Burns",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    backgroundUrl: "/assets/services/cardSvgs/card-1.svg",
+    text: "Delivering specialized care for burns, focusing on pain relief, wound management, and scar minimization for comprehensive recovery.",
     imageUrl: "/assets/services/burns.jpg",
     light: true,
   },
   {
     icon: IoBandage,
     name: "Traumatic Wound",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    backgroundUrl: "/assets/services/cardSvgs/card-6.svg",
+    text: "Offering expert care for traumatic wounds, ensuring rapid healing and optimal recovery through specialized treatment plans.",
     imageUrl: "/assets/services/traumatic.jpg",
   },
 ];
@@ -118,24 +105,24 @@ export const services = [
 export const testimonials = [
   {
     image: "/assets/testimonials/t-avt-1.jpg",
-    name: "Anne Smith",
+    name: "Sarah T.",
     position: "Patient",
     message:
-      "A well rounded software developer, Mr. Greg was able to handle so many areas in the development of my app.",
+      "I can't thank Foot and Wound Institute enough for their exceptional care. After struggling with chronic foot ulcers, I finally found relief and healing through their specialized treatments. The team's expertise and personalized approach made all the difference in my recovery journey. Highly recommend!",
   },
   {
     image: "/assets/testimonials/t-avt-2.jpg",
-    name: "Jane Doe",
-    position: "Patient",
+    name: "Dr. Emily S.",
+    position: "Referring Physician",
     message:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!",
+      "As a healthcare professional myself, I can attest to the quality of care provided by Foot and Wound Institute. Their team goes above and beyond to ensure every patient receives the best possible treatment. I confidently refer my patients knowing they are in good hands.",
   },
   {
     image: "/assets/testimonials/t-avt-3.jpg",
-    name: "Jhon Doe",
+    name: "Mark J",
     position: "Patient",
     message:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!",
+      "Choosing Foot and Wound Institute was the best decision I made for my diabetic foot care. The staff's compassion and dedication were evident from my first visit. They not only treated my wounds effectively but also educated me on preventive care. Thanks to them, I'm back on my feet, literally!",
   },
 ];
 

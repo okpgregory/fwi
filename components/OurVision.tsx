@@ -1,8 +1,6 @@
-import Image from "next/image";
+import { FaQuoteLeft } from "react-icons/fa";
 import MaxWidthWrapper from "./shared/MaxWidthWrapper";
 import SectionTitle from "./shared/SectionTitle";
-import { Quote } from "lucide-react";
-import { FaQuoteLeft } from "react-icons/fa";
 
 export default function OurVision() {
   return (
@@ -22,7 +20,6 @@ export default function OurVision() {
           </div>
         </div>
       </MaxWidthWrapper>
-      {/* <Decor className="w-full rotate-180" /> */}
     </section>
   );
 }

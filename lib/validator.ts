@@ -38,3 +38,41 @@ export const referralFormSchema = z.object({
   medicalProviderType: z.string(),
   //   ["Facilty", "Provider"]
 });
+
+type referralFormType = {
+  patientName: {
+    firstName: string;
+    lastName: string;
+  };
+  patientEmail: string;
+  patientPhone: string;
+  patientAddress: {
+    streetAddress: string;
+    city: string;
+    stateOrProvince: string;
+    postalOrZipCode: string;
+  };
+  patientBirthday: Date;
+  patientPrimaryCareProvider: string;
+  powerOfAttorney: "Yes" | "No";
+  powerOfAttorneyEmail: string;
+  patientInsuranceProvider: string;
+  patientInsuranceIdNumber: string;
+  medicareIdNumber: string;
+  diagnosis: string;
+  durationOfWound: string;
+  medicalProviderCompanyName: string;
+  medicalProviderName: {
+    firstName: string;
+    lastName: string;
+  };
+  medicalProviderEmail: string;
+  medicalProviderPhone: string;
+  medicalProviderAddress: {
+    streetAddress: string;
+    city: string;
+    stateOrProvince: string;
+    postalOrZipCode: string;
+  };
+  medicalProviderType: "Facilty" | "Provider";
+};

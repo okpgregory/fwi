@@ -11,6 +11,7 @@ import { navVariants } from "@/lib/motion";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -49,23 +50,17 @@ export default function Navbar() {
                 </Link>
               </div>
 
-              <MenuButton
-                isOpen={isMenuOpen}
-                setIsOpen={() => setIsMenuOpen(!isMenuOpen)}
-                className="relative z-30 h-[30px] w-[30px] rounded-sm shadow-2xl lg:hidden"
-              />
+              <div className="lg:hidden">
+                <Sheet>
+                  <SheetTrigger>Open</SheetTrigger>
+                  <SheetContent></SheetContent>
+                </Sheet>
+              </div>
             </div>
 
-            <MobileMenu isMenuOpen={isMenuOpen} />
+            {/* <MobileMenu isMenuOpen={isMenuOpen} /> */}
 
             <NavItems />
-
-            {/* <span
-              className="h-6 w-px bg-teal-300 mx-6 hidden lg:block"
-              aria-hidden="true"
-            />
-
-            <ThemeSwitch className="hidden lg:block" /> */}
           </div>
         </MaxWidthWrapper>
       </div>

@@ -12,7 +12,7 @@ import { siteConfig } from "@/config/site";
 export default function OurServices() {
   return (
     // <section className="bg-gradient-to-tl from-blue-900/20">
-    <MaxWidthWrapper className="py-20">
+    <MaxWidthWrapper className="py-20" id="services">
       <SectionTitle
         text="Our services"
         decStyle="bg-blue-500"

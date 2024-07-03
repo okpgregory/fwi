@@ -14,7 +14,10 @@ import { siteConfig } from "@/config/site";
 
 export default function Testimonials() {
   return (
-    <MaxWidthWrapper className="flex h-full items-center justify-center py-20">
+    <MaxWidthWrapper
+      className="flex h-full items-center justify-center py-20"
+      id="testimonials"
+    >
       <div className="h-full w-full">
         <SectionTitle text="Testimonials" />
         <Swiper

@@ -18,22 +18,18 @@ export const siteConfig = {
   description: "On a mission to Heal Wounds",
   navItems: [
     {
-      label: "About",
-      href: "/about",
-    },
-    {
       label: "Services",
-      href: "/services",
+      href: "/#services",
     },
     {
       label: "Referral",
       href: "/referral",
     },
-    { label: "Blog", href: "/blog" },
     {
-      label: "Contact",
-      href: "/contact",
+      label: "Testimonials",
+      href: "/#testimonials",
     },
+    { label: "Blog", href: "/blog" },
   ],
   links: {
     instagram: "https://instagram.com/",

@@ -198,7 +198,7 @@ export default function PatientReferralForm() {
                     <DatePicker
                       selected={field.value}
                       onChange={(date) => field.onChange(date)}
-                      dateFormat="MM/dd/yy"
+                      dateFormat="MM/dd/yyyy"
                       wrapperClassName="datePicker"
                     />
                   </div>

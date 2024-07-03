@@ -4,7 +4,7 @@ import SectionTitle from "./shared/SectionTitle";
 
 export default function OurVision() {
   return (
-    <section className="bg-background">
+    <section className="bg-background" id="our-vision">
       <MaxWidthWrapper className="py-20">
         <div className="grid lg:grid-cols-1">
           <div className="flex flex-col items-center">

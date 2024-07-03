@@ -37,7 +37,9 @@ export default function Referral() {
               Click here for referral form ( please complete and send )
             </span>
           </p>
-          <Link href="/referral">FILL OUT THE REFERRAL FORM</Link>
+          <Link className={buttonVariants()} href="/referral">
+            FILL OUT THE REFERRAL FORM
+          </Link>
         </div>
       </div>
     </MaxWidthWrapper>

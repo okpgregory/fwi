@@ -17,6 +17,9 @@ import { Input } from "@/components/ui/input";
 import { PatientReferralSchema } from "@/utils/validator";
 import { referralFormInitialData } from "@/data/constants";
 import Dropdown from "./Dropdown";
+import Image from "next/image";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 export default function PatientReferralForm() {
   const form = useForm<z.infer<typeof PatientReferralSchema>>({
@@ -184,7 +187,21 @@ export default function PatientReferralForm() {
                   Patient Birthday
                 </FormLabel>
                 <FormControl>
-                  {/* <Input placeholder="" {...field} /> */}
+                  <div className="flex justify-center border border-black/40 items-center h-10 w-full overflow-hidden rounded-md bg-blue-50 px-3 py-2">
+                    <Image
+                      src="/assets/icons/calendar.svg"
+                      alt="calendar"
+                      width={24}
+                      height={24}
+                      className="filter-grey"
+                    />
+                    <DatePicker
+                      selected={field.value}
+                      onChange={(date) => field.onChange(date)}
+                      dateFormat="MM/dd/yy"
+                      wrapperClassName="datePicker"
+                    />
+                  </div>
                 </FormControl>
                 <FormDescription>Date</FormDescription>
                 <FormMessage />

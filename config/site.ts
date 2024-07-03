@@ -45,7 +45,7 @@ export const siteConfig = {
     { name: "Meridian", image: "/assets/health-insurances/Meridian.png" },
     {
       name: "Railroad Medicare",
-      image: "/assets/health-insurances/Railroad.png",
+      image: "/assets/health-insurances/RailRoad.png",
     },
     { name: "Ambetter", image: "/assets/health-insurances/Ambetter.png" },
   ],

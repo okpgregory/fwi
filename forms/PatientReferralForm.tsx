@@ -21,8 +21,10 @@ import Image from "next/image";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
+export type PatientReferralType = z.infer<typeof PatientReferralSchema>;
+
 export default function PatientReferralForm() {
-  const form = useForm<z.infer<typeof PatientReferralSchema>>({
+  const form = useForm<PatientReferralType>({
     resolver: zodResolver(PatientReferralSchema),
     defaultValues: referralFormInitialData,
   });

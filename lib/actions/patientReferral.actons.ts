@@ -1,9 +1,9 @@
 "use server";
 
-import { PatientReferralType } from "@/components/ReferralForm";
 import { handleError } from "@/utils";
 import { connectToDatabase } from "../database";
 import { PatientReferral } from "../database/models/patientReferral";
+import { PatientReferralType } from "@/forms/PatientReferralForm";
 
 export const createPatientReferral = async (
   patientReferralData: PatientReferralType

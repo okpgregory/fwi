@@ -16,6 +16,7 @@ export const siteConfig = {
       label: "Referral",
       href: "/referral",
     },
+    { label: "Blog", href: "/blog" },
     {
       label: "Contact",
       href: "/contact",

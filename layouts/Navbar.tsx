@@ -11,7 +11,13 @@ import { navVariants } from "@/lib/motion";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { CiMenuBurger } from "react-icons/ci";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -56,8 +62,13 @@ export default function Navbar() {
 
               <div className="lg:hidden">
                 <Sheet>
-                  <SheetTrigger>Open</SheetTrigger>
-                  <SheetContent></SheetContent>
+                  <SheetTrigger>
+                    <CiMenuBurger className="text-3xl text-blue-50" />
+                  </SheetTrigger>
+                  <SheetContent className="bg-blue-950 border-none text-white">
+                    <SheetTitle></SheetTitle>
+                    <NavItems mode="mobile" hidden={false} />
+                  </SheetContent>
                 </Sheet>
               </div>
             </div>

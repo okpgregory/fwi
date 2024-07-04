@@ -36,6 +36,7 @@ export default function PatientReferralForm() {
       const referredPatient = await createPatientReferral(values);
       if (referredPatient) {
         form.reset();
+        console.log(referredPatient);
       }
     } catch (error) {
       console.log(error);
@@ -543,7 +544,7 @@ export default function PatientReferralForm() {
           {form.formState.isSubmitting ? (
             <>
               <FaSpinner className="animate-spin mr-4" />
-              Submitting...
+              <span>Submitting...</span>
             </>
           ) : (
             "Refer a Patient Now"

@@ -80,7 +80,7 @@ const PatientReferralSchema = new Schema({
   },
   powerOfAttorney: {
     type: String,
-    enum: ["Yes", "No"],
+    enum: ["yes", "no"],
     required: true,
   },
   powerOfAttorneyEmail: {
@@ -130,7 +130,7 @@ const PatientReferralSchema = new Schema({
   },
   medicalProviderType: {
     type: String,
-    enum: ["Facility", "Provider"],
+    enum: ["facility", "provider"],
     required: true,
   },
   createdAt: {

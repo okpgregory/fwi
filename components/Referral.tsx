@@ -1,14 +1,7 @@
 import Image from "next/image";
-import MaxWidthWrapper from "./shared/MaxWidthWrapper";
-import { Button, buttonVariants } from "./ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "./ui/dialog";
 import Link from "next/link";
+import MaxWidthWrapper from "./shared/MaxWidthWrapper";
+import { buttonVariants } from "./ui/button";
 
 export default function Referral() {
   return (

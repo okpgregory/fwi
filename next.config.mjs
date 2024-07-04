@@ -1,7 +1,4 @@
 /** @type {import('next').NextConfig} */
-
-import { withContentlayer } from "next-contentlayer";
-
 const nextConfig = {
   webpack(config) {
     // Grab the existing rule that handles SVG imports
@@ -32,4 +29,4 @@ const nextConfig = {
   },
 };
 
-export default withContentlayer({ ...nextConfig });
+export default nextConfig;

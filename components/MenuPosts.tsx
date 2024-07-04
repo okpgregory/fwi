@@ -55,7 +55,7 @@ export default function MenuPosts({ withImage }: { withImage: boolean }) {
         {withImage && (
           <div className="flex-1 aspect-square relative">
             <Image
-              src="/p1.jpeg"
+              src="/assets/blog/blog.jpg"
               alt=""
               fill
               className="rounded-full border-[3px] border-gray-400 object-cover"

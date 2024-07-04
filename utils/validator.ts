@@ -40,14 +40,11 @@ export const PatientReferralSchema = z.object({
     .email()
     .min(1, "This field is required")
     .max(400, "Characters too long"),
-  patientPhone: z
-    .string()
-    .min(10, "Must be a valid phone number")
-    .max(10, "Must be a valid phone number"), // Adjust min length as needed
+  patientPhone: z.string().min(1, "Must be a valid phone number"),
   patientAddress: AddressSchema,
   patientBirthday: z.date(),
   patientPrimaryCareProvider: z.string().min(1, "This field is required"),
-  powerOfAttorney: z.enum(["Yes", "No"]),
+  powerOfAttorney: z.enum(["yes", "no"]),
   powerOfAttorneyEmail: z.string().email().optional(), // Make optional if not always required
   patientInsuranceProvider: z.string().min(1, "This field is required"),
   patientInsuranceIdNumber: z.string().min(1, "This field is required"),
@@ -57,45 +54,7 @@ export const PatientReferralSchema = z.object({
   medicalProviderCompanyName: z.string().min(1, "This field is required"),
   medicalProviderName: NameSchema,
   medicalProviderEmail: z.string().email(),
-  medicalProviderPhone: z.string().min(10, "Must be a valid phone number"), // Adjust min length as needed
+  medicalProviderPhone: z.string().min(1, "Must be a valid phone number"), // Adjust min length as needed
   medicalProviderAddress: AddressSchema,
-  medicalProviderType: z.enum(["Facility", "Provider"]),
+  medicalProviderType: z.enum(["facility", "provider"]),
 });
-
-// type referralFormType = {
-//   patientName: {
-//     firstName: string;
-//     lastName: string;
-//   };
-//   patientEmail: string;
-//   patientPhone: string;
-//   patientAddress: {
-//     streetAddress: string;
-//     city: string;
-//     stateOrProvince: string;
-//     postalOrZipCode: string;
-//   };
-//   patientBirthday: Date;
-//   patientPrimaryCareProvider: string;
-//   powerOfAttorney: "Yes" | "No";
-//   powerOfAttorneyEmail: string;
-//   patientInsuranceProvider: string;
-//   patientInsuranceIdNumber: string;
-//   medicareIdNumber: string;
-//   diagnosis: string;
-//   durationOfWound: string;
-//   medicalProviderCompanyName: string;
-//   medicalProviderName: {
-//     firstName: string;
-//     lastName: string;
-//   };
-//   medicalProviderEmail: string;
-//   medicalProviderPhone: string;
-//   medicalProviderAddress: {
-//     streetAddress: string;
-//     city: string;
-//     stateOrProvince: string;
-//     postalOrZipCode: string;
-//   };
-//   medicalProviderType: "Facilty" | "Provider";
-// };

@@ -199,7 +199,8 @@ export default function PatientReferralForm() {
                     />
                     <DatePicker
                       selected={field.value}
-                      onChange={(date) => field.onChange(date)}
+                      onChange={(date: Date | null) => field.onChange(date)}
+                      placeholderText="MM-dd-yyyy"
                       dateFormat="MM/dd/yyyy"
                       wrapperClassName="datePicker"
                     />
@@ -231,7 +232,7 @@ export default function PatientReferralForm() {
         <div className="flex flex-col sm:flex-row gap-4">
           <FormField
             control={form.control}
-            name="patientBirthday"
+            name="powerOfAttorney"
             render={({ field }) => (
               <FormItem className="w-full">
                 <FormLabel className="text-lg font-semibold mb-4">
@@ -240,7 +241,7 @@ export default function PatientReferralForm() {
                 <FormControl>
                   <Dropdown
                     values={["Yes", "No"]}
-                    onChangeHandler={() => {}}
+                    onChangeHandler={field.onChange}
                     className="w-full"
                   />
                 </FormControl>
@@ -250,15 +251,16 @@ export default function PatientReferralForm() {
           />
           <FormField
             control={form.control}
-            name="patientPrimaryCareProvider"
+            name="powerOfAttorneyEmail"
             render={({ field }) => (
               <FormItem className="w-full">
                 <FormLabel className="text-lg font-semibold mb-4">
-                  Patient Primary Care Provider
+                  Power of Attorney Email
                 </FormLabel>
                 <FormControl>
                   <Input placeholder="" {...field} />
                 </FormControl>
+                <FormDescription>example@example.com</FormDescription>
                 <FormMessage />
               </FormItem>
             )}
@@ -335,7 +337,7 @@ export default function PatientReferralForm() {
           />
           <FormField
             control={form.control}
-            name="patientPhone"
+            name="durationOfWound"
             render={({ field }) => (
               <FormItem className="w-full">
                 <FormLabel className="text-lg font-semibold mb-4">
@@ -353,7 +355,7 @@ export default function PatientReferralForm() {
         {/* MEDICAL PROVIDER COMPANY NAME */}
         <FormField
           control={form.control}
-          name="patientInsuranceProvider"
+          name="medicalProviderCompanyName"
           render={({ field }) => (
             <FormItem className="w-full">
               <FormLabel className="text-lg font-semibold mb-4">
@@ -518,7 +520,7 @@ export default function PatientReferralForm() {
               <FormControl>
                 <Dropdown
                   values={["Facility", "Provider"]}
-                  onChangeHandler={() => {}}
+                  onChangeHandler={field.onChange}
                   className="w-full"
                 />
               </FormControl>
@@ -526,8 +528,15 @@ export default function PatientReferralForm() {
             </FormItem>
           )}
         />
-        <Button type="submit" className="w-fit mx-auto">
-          Refer a Patient Now
+        <Button
+          type="submit"
+          className="w-fit mx-auto"
+          size="lg"
+          disabled={form.formState.isSubmitting}
+        >
+          {form.formState.isSubmitting
+            ? "Submitting..."
+            : "Refer a Patient Now"}
         </Button>
       </form>
     </Form>

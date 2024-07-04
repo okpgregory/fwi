@@ -30,14 +30,14 @@ export default function Footer() {
             </div>
             <ul className="flex gap-5 flex-wrap">
               {siteConfig.socials.map((item) => (
-                <Link
+                <a
                   key={item.name}
                   href={item.link}
                   target="_blank"
                   className="flex items-center justify-center w-10 h-10 text-blue-950 rounded-full transition-colors hover:text-blue-950/80"
                 >
                   <item.icon className="text-2xl text-white" />
-                </Link>
+                </a>
               ))}
             </ul>
           </div>

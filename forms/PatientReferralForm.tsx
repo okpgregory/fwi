@@ -20,6 +20,8 @@ import Dropdown from "./Dropdown";
 import Image from "next/image";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { createPatientReferral } from "@/lib/actions/patientReferral.actons";
+import { FaSpinner } from "react-icons/fa";
 
 export type PatientReferralType = z.infer<typeof PatientReferralSchema>;
 
@@ -29,11 +31,15 @@ export default function PatientReferralForm() {
     defaultValues: referralFormInitialData,
   });
 
-  // 2. Define a submit handler.
-  function onSubmit(values: z.infer<typeof PatientReferralSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values);
+  async function onSubmit(values: PatientReferralType) {
+    try {
+      const referredPatient = await createPatientReferral(values);
+      if (referredPatient) {
+        form.reset();
+      }
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   return (
@@ -534,9 +540,14 @@ export default function PatientReferralForm() {
           size="lg"
           disabled={form.formState.isSubmitting}
         >
-          {form.formState.isSubmitting
-            ? "Submitting..."
-            : "Refer a Patient Now"}
+          {form.formState.isSubmitting ? (
+            <>
+              <FaSpinner className="animate-spin mr-4" />
+              Submitting...
+            </>
+          ) : (
+            "Refer a Patient Now"
+          )}
         </Button>
       </form>
     </Form>

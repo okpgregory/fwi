@@ -3,10 +3,8 @@ import styles from "./card.module.css";
 import Link from "next/link";
 
 const Card = ({
-  key,
   item,
 }: {
-  key: number;
   item: {
     _id: number;
     img: string;
@@ -19,7 +17,7 @@ const Card = ({
   };
 }) => {
   return (
-    <div className="mt-12 flex items-center gap-12" key={key}>
+    <div className="mt-12 flex items-center gap-12">
       {item.img && (
         <div className="flex-1 h-[350px] relative xl:hidden">
           <Image src={item.img} alt="" fill className="object-cover" />

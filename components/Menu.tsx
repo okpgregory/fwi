@@ -6,7 +6,7 @@ import MenuCategories from "./MenuCategories";
 export default function Menu() {
   return (
     <div className="flex-[2] mt-16">
-      <h3 className="text-gray-700 text-base font-normal">{"What's hot"}</h3>
+      <h4 className="text-gray-700 text-base font-normal">{"What's hot"}</h4>
       <h3 className="text-3xl">Most Popular</h3>
       <MenuPosts withImage={false} />
       <h3 className="text-gray-700 text-base font-normal">Discover by topic</h3>

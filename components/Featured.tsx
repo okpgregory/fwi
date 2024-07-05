@@ -1,34 +1,60 @@
+import { slug } from "github-slugger";
 import Image from "next/image";
-import React from "react";
-import { Button } from "./ui/button";
+import Link from "next/link";
+import CategoryCard from "./CategoryCard";
+import MenuPosts from "./MenuPosts";
+import CategoryList from "./CategoryList";
+import Menu from "./Menu";
+import CardList from "./CardList";
 
 export default function Featured() {
   return (
-    <div className="mt-8">
-      <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold ">
-        <b>Step into Recovery:</b> Insights from the Foot Wound Institute.
-      </h1>
-      <div className="mt-16 flex items-center gap-12">
-        <div className="flex-1 h-[500px] relative">
+    <div className="grid md:grid-cols-4 gap-16">
+      <div className="w-full inline-block col-span-3">
+        <article className="flex flex-col items-start justify-end relative h-[60vh] sm:h-[65vh]">
+          <div
+            className="absolute top-0 left-0 bottom-0 right-0 h-full
+            bg-gradient-to-b from-transparent from-0% to-dark/90 rounded-3xl z-0
+            "
+          />
           <Image
             src="/assets/blog/blog.jpg"
-            alt=""
+            // placeholder="blur"
+            // blurDataURL={blog.image.blurhashDataUrl}
+            alt="title"
             fill
-            className="object-cover"
+            className="w-full h-full object-center object-cover rounded-3xl -z-10"
+            sizes="100vw"
+            priority
           />
-        </div>
-        <div className="flex-1 flex flex-col gap-5">
-          <h2 className="text-4xl">
-            Lorem ipsum dolor sit amet alim consectetur adipisicing elit.
-          </h2>
-          <p className="text-xl font-light text-blue-700/80">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Cupiditate, quam nisi magni ea laborum inventore voluptatum
-            laudantium repellat ducimus unde aspernatur fuga. Quo, accusantium
-            quisquam! Harum unde sit culpa debitis.
-          </p>
-          <Button>Read More</Button>
-        </div>
+
+          <div className="w-full rounded-b-3xl bg-black/50 px-4 md:px-8 lg:px-16 py-8 flex flex-col text-white items-start justify-center z-0 text-light">
+            <CategoryCard
+              title="category"
+              link={`/categories/${slug("tags")}`}
+            />
+            <Link href="/url" className="mt-6">
+              <h1 className="font-bold capitalize text-lg sm:text-xl md:text-3xl lg:text-4xl">
+                <span
+                  className="bg-gradient-to-r from-accent to-accent dark:from-accentDark/50 
+                dark:to-accentDark/50 bg-[length:0px_6px]
+                hover:bg-[length:100%_6px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 "
+                >
+                  title
+                </span>
+              </h1>
+            </Link>
+            <p className="hidden  sm:inline-block mt-4 md:text-lg lg:text-xl font-light">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores,
+              nisi fuga? Velit harum veniam ex delectus quo cumque placeat vel.
+            </p>
+          </div>
+        </article>
+        <CategoryList />
+        <CardList page={2} cat="style" />
+      </div>
+      <div>
+        <Menu />
       </div>
     </div>
   );

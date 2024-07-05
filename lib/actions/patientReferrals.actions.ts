@@ -2,8 +2,8 @@
 
 import { handleError } from "@/utils";
 import { connectToDatabase } from "../database";
-import { PatientReferral } from "../database/models/patientReferral";
 import { PatientReferralType } from "@/forms/PatientReferralForm";
+import { PatientReferral } from "../database/models/PatientReferral";
 
 export const createPatientReferral = async (
   patientReferralData: PatientReferralType

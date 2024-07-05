@@ -20,8 +20,9 @@ import Dropdown from "./Dropdown";
 import Image from "next/image";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { createPatientReferral } from "@/lib/actions/patientReferral.actons";
+import { createPatientReferral } from "@/lib/actions/patientReferrals.actions";
 import { FaSpinner } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 export type PatientReferralType = z.infer<typeof PatientReferralSchema>;
 
@@ -36,7 +37,9 @@ export default function PatientReferralForm() {
       const referredPatient = await createPatientReferral(values);
       if (referredPatient) {
         form.reset();
-        console.log(referredPatient);
+        toast.success("Patient successfully referred!");
+      } else {
+        toast.error("Error referring patient");
       }
     } catch (error) {
       console.log(error);

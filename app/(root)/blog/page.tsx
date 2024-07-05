@@ -6,13 +6,9 @@ import MaxWidthWrapper from "@/components/shared/MaxWidthWrapper";
 
 export default function BlogPage() {
   return (
-    <MaxWidthWrapper>
+    <MaxWidthWrapper className="py-20">
       <Featured />
-      <CategoryList />
-      <div className="flex gap-12">
-        <CardList page={2} cat="style" />
-        <Menu />
-      </div>
+      <div className="flex gap-12"></div>
     </MaxWidthWrapper>
   );
 }

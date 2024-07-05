@@ -1,3 +1,4 @@
+import { Document } from "mongoose";
 import { model, models } from "mongoose";
 import { Schema } from "mongoose";
 
@@ -13,7 +14,7 @@ interface Address {
   postalOrZipCode: string;
 }
 
-export interface IPatientRefrral extends Document {
+export interface IPatientReferral extends Document {
   _id: string;
   patientName: Name;
   patientEmail: string;

@@ -11,7 +11,7 @@ export default function CategoryCard({
   return (
     <Link
       href={link}
-      className="capitalize h-10 flex items-center px-2 justify-center rounded-lg bg-slate-900"
+      className="capitalize h-10 flex items-center px-2 justify-center rounded-lg bg-blue-600"
     >
       <span className="text-sm text-blue-50 whitespace-nowrap font-medium">
         {title}

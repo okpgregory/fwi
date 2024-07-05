@@ -19,12 +19,14 @@ export default function Pagination({
       <Button
         disabled={!hasPrev}
         onClick={() => router.push(`?page=${page - 1}`)}
+        className="bg-blue-600"
       >
         Previous
       </Button>
       <Button
         disabled={!hasNext}
         onClick={() => router.push(`?page=${page + 1}`)}
+        className="bg-blue-600"
       >
         Next
       </Button>

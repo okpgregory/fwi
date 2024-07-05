@@ -29,9 +29,9 @@ export default function Navbar() {
       initial="hidden"
       whileInView="show"
       className={cn("top-0 z-50 sticky inset-x-0 h-24 bg-gradient-to-b", {
-        "shadow-md from-blue-950 via-blue-950/60 to-blue-950/30 backdrop-blur-md":
+        "shadow-md from-slate-800 via-slate-800/60 to-slate-800/30 backdrop-blur-md":
           isNavbarVisible,
-        "from-blue-950 via-blue-950 to-blue-950/90 backdrop-blur-md":
+        "from-slate-800 via-slate-800 to-slate-800/90 backdrop-blur-md":
           !isNavbarVisible,
       })}
       aria-label="Header"
@@ -40,9 +40,9 @@ export default function Navbar() {
         className={cn(
           "relative rounded- transition-all duration-500 ease-in-out bg-gradient-to-b",
           {
-            "from-blue-950 via-blue-950/60 to-blue-950/30 backdrop-blur-md":
+            "from-slate-800 via-slate-800/60 to-slate-800/30 backdrop-blur-md":
               isNavbarVisible,
-            "from-blue-950 via-blue-950 to-blue-950/90 backdrop-blur-md":
+            "from-slate-800 via-slate-800 to-slate-800/90 backdrop-blur-md":
               !isNavbarVisible,
           }
         )}

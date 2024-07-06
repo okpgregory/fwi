@@ -1,5 +1,3 @@
-"use server";
-
 import { connectToDatabase } from "@/lib/database";
 import { Category } from "@/lib/database/models/blog/Category";
 import { CategoryPost } from "@/types";

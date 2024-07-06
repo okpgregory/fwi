@@ -3,7 +3,7 @@ import Sidebar from "@/components/Sidebar";
 import Write from "@/components/Write";
 import { ReactNode } from "react";
 
-export default function page({ children }: { children: ReactNode }) {
+export default function Page({ children }: { children: ReactNode }) {
   return (
     <div>
       <div className="flex">

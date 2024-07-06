@@ -1,4 +1,3 @@
-import React from "react";
 import Card from "./Card";
 import Pagination from "./Pagination";
 import { getPosts } from "@/lib/actions/blog/posts.actions";
@@ -11,7 +10,10 @@ export default async function CardList({
   page: number;
   cat?: string;
 }) {
-  const { posts, postsCount: count } = await getPosts({ page });
+  const { posts, postsCount: count } = await getPosts({
+    page,
+    POST_PER_PAGE: 3,
+  });
 
   const POST_PER_PAGE = 2;
 
@@ -19,7 +21,7 @@ export default async function CardList({
   const hasNext = POST_PER_PAGE * (page - 1) + POST_PER_PAGE < count;
 
   return (
-    <div className="flex flex-col justify-between h-full">
+    <div className="flex flex-col justify-between h-full gap-8">
       <h3 className="mt-12 text-5xl text-slate-700 mb-4">Recent Posts</h3>
       <div className="">
         {posts?.map((post: IPost) => (

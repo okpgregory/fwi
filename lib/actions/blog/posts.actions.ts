@@ -19,17 +19,32 @@ export const createPost = async (post: PostPost) => {
   }
 };
 
-export const getPosts = async ({ page }: { page: number }) => {
-  const POST_PER_PAGE = 2;
-
+export const getPosts = async ({
+  page,
+  POST_PER_PAGE,
+}: {
+  page: number;
+  POST_PER_PAGE: number;
+}) => {
   try {
     await connectToDatabase();
     const posts = await Post.find()
-      .skip(POST_PER_PAGE * page - 1)
+      .skip(POST_PER_PAGE * (page - 1))
       .limit(POST_PER_PAGE)
-      .lean();
+      .lean()
+      .populate("category");
     const postsCount = await Post.countDocuments();
     return JSON.parse(JSON.stringify({ posts, postsCount }));
+  } catch (error) {
+    handleError(error);
+  }
+};
+
+export const getPost = async () => {
+  try {
+    await connectToDatabase();
+    const post = await Post.findOne().populate("category");
+    return JSON.parse(JSON.stringify(post));
   } catch (error) {
     handleError(error);
   }

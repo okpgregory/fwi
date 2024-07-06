@@ -13,7 +13,7 @@ const Card = ({ post }: { post: IPost }) => {
       <div className="flex-1 flex flex-col gap-8">
         <div className="">
           <span className="text-gray-600">
-            {post.createdAt.substring(0, 10)} -{" "}
+            {new Date(post.createdAt).toLocaleDateString()} -{" "}
           </span>
           <span className="text-pink-600 font-medium">{post.categorySlug}</span>
         </div>

@@ -3,12 +3,13 @@
 import { useState } from "react";
 import { Input } from "./ui/input";
 import { FaPlus } from "react-icons/fa";
-import ReactQuill from "react-quill";
+const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 import "react-quill/dist/quill.bubble.css";
 import { CiImageOn } from "react-icons/ci";
 import { GoVideo } from "react-icons/go";
 import { MdOutlineFileUpload } from "react-icons/md";
 import { Button } from "./ui/button";
+import dynamic from "next/dynamic";
 
 export default function Write() {
   const [open, setOpen] = useState(false);

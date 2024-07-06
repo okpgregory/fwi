@@ -25,7 +25,7 @@ export default async function MenuPosts({ withImage }: { withImage: boolean }) {
             </div>
           )}
           <div className="flex-[4] flex flex-col gap-[5px]">
-            <span className={`py-1 px-3 text-xs text-white bg-blue-300 w-max`}>
+            <span className={`py-1 px-3 text-xs text-white bg-blue-600 w-max`}>
               {post.category.title}
             </span>
             <h3 className="text-lg font-medium text-blue-700/90">

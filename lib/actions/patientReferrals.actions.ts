@@ -1,7 +1,7 @@
 "use server";
 
 import { handleError } from "@/utils";
-import { connectToDatabase } from "../database";
+import { connectToDatabase } from "@/lib/database";
 import { PatientReferralType } from "@/forms/PatientReferralForm";
 import { PatientReferral } from "@/lib/database/models/PatientReferral";
 

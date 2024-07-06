@@ -1,6 +1,5 @@
-import { Category } from "@/lib/database/models/blog/Category";
-import { IPost } from "./../../database/models/blog/Post";
 import { connectToDatabase } from "@/lib/database";
+import { Category } from "@/lib/database/models/blog/Category";
 import { Post } from "@/lib/database/models/blog/Post";
 import { PostPost } from "@/types";
 import { handleError } from "@/utils";

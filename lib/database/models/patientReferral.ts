@@ -149,5 +149,7 @@ const PatientReferralSchema = new Schema({
 //   this.updatedAt = Date.now();
 // });
 
-export const PatientReferral =
+const PatientReferral =
   models.PatientReferral || model("PatientReferral", PatientReferralSchema);
+
+export default PatientReferral;

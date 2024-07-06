@@ -15,7 +15,7 @@ export default function Pagination({
   const router = useRouter();
 
   return (
-    <div className="flex justify-between">
+    <div className="flex justify-between mt-auto">
       <Button
         disabled={!hasPrev}
         onClick={() => router.push(`?page=${page - 1}`)}

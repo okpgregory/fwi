@@ -1,9 +1,10 @@
-import { model } from "mongoose";
+import { Document, model } from "mongoose";
 import { models, Schema } from "mongoose";
 import { ICategory } from "./Category";
 import { IComment } from "./Comment";
 
 export interface IPost extends Document {
+  _id: string;
   slug: string;
   title: string;
   desc: string;

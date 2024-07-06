@@ -3,7 +3,31 @@ export type SearchParamProps = {
   searchParams: { [key: string]: string | string[] | undefined };
 };
 
+export type PostPost = {
+  slug: string;
+  title: string;
+  desc: string;
+  img: string;
+  views?: number;
+  categorySlug?: string;
+  category: string;
+  comments?: CommentPost;
+};
+
+export type CommentPost = {
+  desc: string;
+  userEmail: string;
+  user: UserPost;
+  postSlug: string;
+  post: PostPost;
+};
+
 export type CategoryPost = {
   slug: string;
   title: string;
+  posts?: PostPost;
+};
+
+export type UserPost = {
+  email: string;
 };

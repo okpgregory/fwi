@@ -3,9 +3,12 @@ import { IPost } from "@/lib/database/models/blog/Post";
 import Image from "next/image";
 import Link from "next/link";
 
-export default async function MenuPosts({ withImage }: { withImage: boolean }) {
-  const { posts } = await getPosts({ page: 1, POST_PER_PAGE: 5 });
+type Props = {
+  withImage: boolean;
+  posts: IPost[];
+};
 
+export default async function MenuPosts({ withImage, posts }: Props) {
   return (
     <div className="mt-9 mb-16 flex flex-col gap-8">
       {posts.map((post: IPost) => (

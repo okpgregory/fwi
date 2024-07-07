@@ -2,6 +2,7 @@ import { Document, model } from "mongoose";
 import { models, Schema } from "mongoose";
 import { ICategory } from "./Category";
 import { IComment } from "./Comment";
+import slugify from "slugify";
 
 export interface IPost extends Document {
   _id: string;
@@ -25,7 +26,14 @@ const PostSchema = new Schema({
   categorySlug: { type: String, required: true },
   category: { type: Schema.Types.ObjectId, ref: "Category" },
   comments: [{ type: Schema.Types.ObjectId, ref: "Comment" }],
-  createdAt: { type: Date, default: () => Date.now() },
+  createdAt: { type: Date, immutable: true, default: () => Date.now() },
+});
+
+PostSchema.pre("validate", function (next) {
+  if (this.title) {
+    this.slug = slugify(this.title, { lower: true, strict: true });
+  }
+  next();
 });
 
 export const Post = models.Post || model("Post", PostSchema);

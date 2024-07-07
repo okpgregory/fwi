@@ -19,7 +19,7 @@ const CommentSchema = new Schema({
   user: { type: Schema.Types.ObjectId, ref: "User" },
   postSlug: { type: String, required: true },
   post: { type: Schema.Types.ObjectId, ref: "Post" },
-  createdAt: { type: Date, default: () => Date.now() },
+  createdAt: { type: Date, immutable: true, default: () => Date.now() },
 });
 
 export const Comment = models.Comment || model("Comment", CommentSchema);

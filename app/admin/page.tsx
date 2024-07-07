@@ -1,19 +1,11 @@
-import MaxWidthWrapper from "@/components/shared/MaxWidthWrapper";
-import Sidebar from "@/components/Sidebar";
+import Dashboard from "@/components/Dashboard";
 import Write from "@/components/Write";
-import { ReactNode } from "react";
 
 export default function Page() {
   return (
     <div>
-      <div className="flex">
-        <div className="hidden md:block h-screen w-[300px]">
-          <Sidebar />
-        </div>
-        <MaxWidthWrapper className="py-20">
-          <Write />
-        </MaxWidthWrapper>
-      </div>
+      <Dashboard />
+      <Write />
     </div>
   );
 }

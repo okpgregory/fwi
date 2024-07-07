@@ -1,3 +1,7 @@
+import { ReactNode } from "react";
+
+export type StringBooleanObjProp = { [key: string]: boolean };
+
 export type SearchParamProps = {
   params: { id: string; page: string; cat: string; slug: string };
   searchParams: { [key: string]: string | string[] | undefined };

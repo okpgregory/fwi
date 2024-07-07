@@ -1,24 +1,27 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { useState } from "react";
-import { Input } from "./ui/input";
-import { FaPlus } from "react-icons/fa";
-const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
-import "react-quill/dist/quill.bubble.css";
 import { CiImageOn } from "react-icons/ci";
+import { FaPlus } from "react-icons/fa";
 import { GoVideo } from "react-icons/go";
 import { MdOutlineFileUpload } from "react-icons/md";
+import "react-quill/dist/quill.bubble.css";
 import { Button } from "./ui/button";
-import dynamic from "next/dynamic";
+const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 
 export default function Write() {
   const [open, setOpen] = useState(false);
   const [text, setText] = useState("");
 
   return (
-    <div>
+    <div className="relative border border-slate-500 py-4 px-2 rounded-sm">
+      <div className="mb-4 flex items-center justify-between border-b border-slate-400 p-4">
+        <h2 className="text-3xl text-sky-600 font-medium">Create Blog Post</h2>
+        <Button className="bg-green-600">Publish</Button>
+      </div>
       <input
-        className="p-8 text-[64px] border-none outline-none bg-transparent placeholder:text-[#b3b3b1]"
+        className="p-8 text-[64px] border-none outline-none w-full bg-transparent placeholder:text-[#b3b3b1]"
         placeholder="Title"
       />
       <div className="flex gap-5 h-[700px] relative">
@@ -49,7 +52,6 @@ export default function Write() {
           className="w-full pt-8"
         />
       </div>
-      <Button className="absolute top-[30px] right-[20px]">Publish</Button>
     </div>
   );
 }

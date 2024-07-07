@@ -1,6 +1,4 @@
 import { siteConfig } from "@/config/site";
-import Footer from "@/layouts/Footer";
-import Navbar from "@/layouts/Navbar";
 import "@/styles/globals.css";
 import { cn } from "@/utils";
 import type { Metadata } from "next";
@@ -23,12 +21,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full scroll-smooth">
-      <body className={cn("relative font-sans antialiased", inter.className)}>
-        <Navbar />
-        <main className="relative flex flex-col">
-          <div className="flex-grow flex-1">{children}</div>
-        </main>
-        <Footer />
+      <body
+        className={cn(
+          "relative font-sans antialiased bg-slate-500/10",
+          inter.className
+        )}
+      >
+        {children}
       </body>
     </html>
   );

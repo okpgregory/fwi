@@ -56,6 +56,9 @@ const config = {
       },
       backgroundImage: {
         "radial-gradient": "radial-gradient(var(--tw-gradient-stops))",
+        appointments: "url('/assets/stats-card/appointments-bg.png')",
+        pending: "url('/assets/stats-card/pending-bg.png')",
+        cancelled: "url('/assets/stats-card/cancelled-bg.png')",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -75,6 +78,10 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      width: {
+        "banner-container":
+          "max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-4xl",
       },
     },
   },

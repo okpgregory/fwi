@@ -23,10 +23,13 @@ import "react-datepicker/dist/react-datepicker.css";
 import { createPatientReferral } from "@/lib/actions/patientReferrals.actions";
 import { FaSpinner } from "react-icons/fa";
 import { toast } from "react-toastify";
+import { useRouter } from "next/navigation";
 
 export type PatientReferralType = z.infer<typeof PatientReferralSchema>;
 
 export default function PatientReferralForm() {
+  const router = useRouter();
+
   const form = useForm<PatientReferralType>({
     resolver: zodResolver(PatientReferralSchema),
     defaultValues: referralFormInitialData,
@@ -37,9 +40,7 @@ export default function PatientReferralForm() {
       const referredPatient = await createPatientReferral(values);
       if (referredPatient) {
         form.reset();
-        toast.success("Patient successfully referred!");
-      } else {
-        toast.error("Error referring patient");
+        router.push("/referral/success");
       }
     } catch (error) {
       console.log(error);

@@ -6,12 +6,5 @@ type Props = {
 };
 
 export default function FeaturedCheckbox() {
-  return (
-    <div className="text-14-medium ">
-      <Checkbox
-        checked={post.featured}
-        onCheckedChange={() => setFeaturedPost(post._id)}
-      />
-    </div>
-  );
+  return <div className="text-14-medium "></div>;
 }

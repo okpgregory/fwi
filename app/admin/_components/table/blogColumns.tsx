@@ -3,7 +3,6 @@
 import { ColumnDef } from "@tanstack/react-table";
 import Image from "next/image";
 
-import CategoryCard from "@/components/blog/CategoryCard";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { setFeaturedPost } from "@/lib/actions/blog/posts.actions";

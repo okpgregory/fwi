@@ -17,7 +17,7 @@ export default function Referral() {
           />
         </div>
         <div>
-          <h3 className="text-blue-900 text-4xl sm:text-6xl md:text-7xl text-pretty tracking-wider font-light">
+          <h3 className="text-blue-700 text-4xl sm:text-6xl md:text-7xl text-pretty tracking-wider font-light">
             Referral Process
           </h3>
           <p className="mt-6 max-w-prose leading-8 text-lg text-muted-foreground font-medium">

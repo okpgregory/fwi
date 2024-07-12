@@ -9,8 +9,8 @@ type Props = {
 
 export default function SectionTitle({
   text,
-  decStyle = "bg-blue-400",
-  priStyle = "text-blue-400",
+  decStyle = "bg-blue-300",
+  priStyle = "text-blue-300",
   secStyle = "text-blue-900",
 }: Props) {
   return (

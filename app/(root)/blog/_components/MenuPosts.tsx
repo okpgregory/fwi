@@ -16,12 +16,13 @@ export default async function MenuPosts({ withImage }: { withImage: boolean }) {
           className="flex items-center gap-5"
         >
           {withImage && (
-            <div className="flex-1 aspect-square relative">
+            <div className="flex-1 aspect-square relative min-h-full">
               <Image
                 src={post.img}
-                alt=""
+                alt={post.title}
                 fill
                 className="rounded-full border-[3px] border-gray-400 object-cover"
+                priority
               />
             </div>
           )}

@@ -32,7 +32,7 @@ export default function Sidebar() {
         <Logo className="p-4 text-blue-100 border-b" />
       </Link>
       <CommandInput
-        className="placeholder:text-blue-50 text-sky-50"
+        className="placeholder:text-blue-50 text-sky-50 border-none"
         placeholder="Type a command or search..."
       />
       <CommandList>

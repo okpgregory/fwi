@@ -224,6 +224,7 @@ export default function ReferralForm() {
                       width={24}
                       height={24}
                       className="filter-gray"
+                      priority
                     />
                     <DatePicker
                       selected={field.value}

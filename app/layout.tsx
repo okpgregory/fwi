@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template: `%s | ${process.env.APP_NAME}`,
     default: `${process.env.APP_NAME}`,
   },
-  description: `${process.env.APP_DESCRIPTION}`,
+  description: `${process.env.APP_DESC}`,
   icons: {
     icon: "/favicon.ico",
   },

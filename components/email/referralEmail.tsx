@@ -1,4 +1,3 @@
-import { ReferralType } from "../forms/ReferralForm";
 import {
   Html,
   Head,
@@ -12,6 +11,7 @@ import {
   Img,
 } from "@react-email/components";
 import { Tailwind } from "@react-email/tailwind";
+import { ReferralType } from "../form/ReferralForm";
 
 export default function PatientReferralEmail({
   ReferralData,

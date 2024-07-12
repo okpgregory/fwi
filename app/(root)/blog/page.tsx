@@ -1,8 +1,8 @@
-import CardList from "@/components/CardList";
-import CategoryList from "@/components/CategoryList";
-import Featured from "@/components/Featured";
-import Menu from "@/components/Menu";
 import MaxWidthWrapper from "@/components/shared/MaxWidthWrapper";
+import Featured from "./_components/Featured";
+import CategoryList from "./_components/CategoryList";
+import CardList from "./_components/CardList";
+import Menu from "./_components/Menu";
 
 type Props = {
   searchParams: {
@@ -25,7 +25,6 @@ export default function BlogPage({ searchParams }: Props) {
           <Menu />
         </div>
       </div>
-      {/* <div className="flex gap-12"></div> */}
     </MaxWidthWrapper>
   );
 }

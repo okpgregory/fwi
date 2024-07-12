@@ -1,8 +1,7 @@
-import { Document, model } from "mongoose";
-import { models, Schema } from "mongoose";
+import { Document, model, models, Schema } from "mongoose";
+import slugify from "slugify";
 import { ICategory } from "./Category";
 import { IComment } from "./Comment";
-import slugify from "slugify";
 
 export interface IPost extends Document {
   _id: string;
@@ -11,6 +10,7 @@ export interface IPost extends Document {
   desc: string;
   img: string;
   views: number;
+  featured: boolean;
   categorySlug: string;
   category: ICategory;
   comments: IComment;
@@ -23,6 +23,7 @@ const PostSchema = new Schema({
   desc: { type: String, required: true },
   img: { type: String },
   views: { type: Number, default: 0 },
+  featured: { type: Boolean, default: false },
   categorySlug: { type: String, required: true },
   category: { type: Schema.Types.ObjectId, ref: "Category" },
   comments: [{ type: Schema.Types.ObjectId, ref: "Comment" }],

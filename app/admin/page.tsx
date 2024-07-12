@@ -1,5 +1,5 @@
-import Dashboard from "@/components/Dashboard";
-import Write from "@/components/Write";
+import Dashboard from "@/app/admin/_components/Dashboard";
+import Write from "@/app/admin/_components/Write";
 
 export default function Page() {
   return (

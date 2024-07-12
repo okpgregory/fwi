@@ -1,4 +1,3 @@
-import { Book, Caravan, Glasses, Globe, Map } from "lucide-react";
 import { CiMedicalMask } from "react-icons/ci";
 import {
   FaAmbulance,
@@ -18,16 +17,8 @@ export const siteConfig = {
   description: "On a mission to Heal Wounds",
   navItems: [
     {
-      label: "Services",
-      href: "/#services",
-    },
-    {
       label: "Referral",
       href: "/referral",
-    },
-    {
-      label: "Testimonials",
-      href: "/#testimonials",
     },
     { label: "Blog", href: "/blog" },
   ],
@@ -50,26 +41,16 @@ export const siteConfig = {
     { name: "Ambetter", image: "/assets/health-insurances/Ambetter.png" },
   ],
   goals: [
-    {
-      text: "Nationwide provision of wound care to all individuals in need of wound care services.",
-      icon: Map,
-    },
-    {
-      text: "Wound healing and prevention care education.",
-      icon: Book,
-    },
-    {
-      text: "Skilled mobile wound care service that is caring and brings comfort to patients.",
-      icon: Caravan,
-    },
-    {
-      text: "Elite skilled health care professionals who train and treat wounds.",
-      icon: Glasses,
-    },
-    {
-      text: "Global wound care training and professional development Focused on wound care.",
-      icon: Globe,
-    },
+    "Nationwide provision of wound care to all individuals in need of wound care services.",
+    ,
+    "Wound healing and prevention care education.",
+    ,
+    "Skilled mobile wound care service that is caring and brings comfort to patients.",
+    ,
+    "Elite skilled health care professionals who train and treat wounds.",
+    ,
+    "Global wound care training and professional development Focused on wound care.",
+    ,
   ],
   services: [
     {

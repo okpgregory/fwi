@@ -1,6 +1,6 @@
 "use client";
 
-import useThemeSwitcher from "@/hooks/useThemeSwitcher";
+import useThemeSwitcher from "@/utils/hooks/useThemeSwitcher";
 import { MoonIcon, SunIcon } from "./ui/Icons";
 import { cn } from "@/utils";
 

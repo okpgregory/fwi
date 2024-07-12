@@ -26,7 +26,7 @@ export default function NavItems({
     >
       <ul
         className={cn("flex h-full items-center", {
-          " gap-4": mode === "desktop",
+          "gap-4": mode === "desktop",
           "flex-col justify-center gap-8": mode === "mobile",
         })}
       >

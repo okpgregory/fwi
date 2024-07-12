@@ -1,14 +1,16 @@
-import { siteConfig } from "@/config/site";
 import "@/styles/globals.css";
 import { cn } from "@/utils";
 import type { Metadata } from "next";
-import { Fjalla_One } from "next/font/google";
+import { Work_Sans } from "next/font/google";
 
-const inter = Fjalla_One({ subsets: ["latin"], weight: "400" });
+const workSans = Work_Sans({ subsets: ["latin"], variable: "--workSans" });
 
 export const metadata: Metadata = {
-  title: { default: siteConfig.name, template: `%s - ${siteConfig.name}` },
-  description: siteConfig.description,
+  title: {
+    template: `%s | ${process.env.APP_NAME}`,
+    default: `${process.env.APP_NAME}`,
+  },
+  description: `${process.env.APP_DESCRIPTION}`,
   icons: {
     icon: "/favicon.ico",
   },
@@ -23,8 +25,8 @@ export default function RootLayout({
     <html lang="en" className="h-full scroll-smooth">
       <body
         className={cn(
-          "relative font-sans antialiased bg-slate-500/10",
-          inter.className
+          "font-workSans min-h-screen bg-blue-50 antialiased",
+          workSans.variable
         )}
       >
         {children}

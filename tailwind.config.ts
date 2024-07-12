@@ -1,11 +1,11 @@
 import type { Config } from "tailwindcss";
+import { fontFamily } from "tailwindcss/defaultTheme";
 
 const config = {
   darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
-    "./layouts/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
   ],
@@ -55,10 +55,7 @@ const config = {
         },
       },
       backgroundImage: {
-        "radial-gradient": "radial-gradient(var(--tw-gradient-stops))",
-        appointments: "url('/assets/stats-card/appointments-bg.png')",
-        pending: "url('/assets/stats-card/pending-bg.png')",
-        cancelled: "url('/assets/stats-card/cancelled-bg.png')",
+        hero: "url(/assets/hero.jpg)",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -79,13 +76,19 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
-      width: {
-        "banner-container":
-          "max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-4xl",
+      fontFamily: {
+        workSans: ["var(--workSans)", ...fontFamily.sans],
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    require("@tailwindcss/aspect-ratio"),
+    require("@tailwindcss/container-queries"),
+    require("@tailwindcss/forms"),
+    require("@tailwindcss/typography"),
+    require("tailwind-scrollbar-hide"),
+  ],
 } satisfies Config;
 
 export default config;

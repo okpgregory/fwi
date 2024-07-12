@@ -1,18 +1,5 @@
 import { cn } from "@/utils";
 
-type colorRange =
-  | "50"
-  | "100"
-  | "200"
-  | "300"
-  | "400"
-  | "500"
-  | "600"
-  | "700"
-  | "800"
-  | "900"
-  | "950";
-
 type Props = {
   text: string;
   decStyle?: string;
@@ -22,8 +9,8 @@ type Props = {
 
 export default function SectionTitle({
   text,
-  decStyle = "bg-blue-300",
-  priStyle = "text-blue-300",
+  decStyle = "bg-blue-400",
+  priStyle = "text-blue-400",
   secStyle = "text-blue-900",
 }: Props) {
   return (
@@ -40,7 +27,7 @@ export default function SectionTitle({
         </h2>
         <span
           className={cn(
-            "absolute left-1/2 -translate-x-1/2 top-1/2 translate-y-0.5 font-bold tracking-[8px] w-full text-center text-sm",
+            "absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-[20%] font-bold tracking-[8px] w-full text-center text-sm",
             secStyle
           )}
         >

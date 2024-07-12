@@ -10,13 +10,7 @@ type Props = {
   iconColor: string;
 };
 
-export default function StatCard({
-  type,
-  Icon,
-  count,
-  label,
-  iconColor,
-}: Props) {
+const StatCard = ({ type, Icon, count, label, iconColor }: Props) => {
   return (
     <div className="bg-slate-800/30 rounded-2xl">
       <div
@@ -37,4 +31,6 @@ export default function StatCard({
       </div>
     </div>
   );
-}
+};
+
+export default StatCard;

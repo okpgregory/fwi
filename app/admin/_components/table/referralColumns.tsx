@@ -3,10 +3,10 @@
 import { ColumnDef } from "@tanstack/react-table";
 
 import { Button } from "@/components/ui/button";
-import { IPatientReferral } from "@/lib/database/models/patientReferral";
 import { StatusBadge } from "./StatusBadge";
+import { IReferral } from "@/lib/database/models/Referral";
 
-export const referralColumns: ColumnDef<IPatientReferral>[] = [
+export const referralColumns: ColumnDef<IReferral>[] = [
   {
     header: "#",
     cell: ({ row }) => {

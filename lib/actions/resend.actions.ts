@@ -15,8 +15,8 @@ export const sendReferralEmail = async ({
 }) => {
   try {
     await resend.emails.send({
-      from: "Foot Wound Institute <onboarding@resend.dev>",
-      to: "greghim53lf@gmail.com",
+      from: "Foot Wound Institute <greghim53lf@gmail.com>",
+      to: "Fwi@footandwoundinstitute.com",
       subject: "New Patient Referral",
       react: createElement(PatientReferralEmail, {
         ReferralData: referralData,
